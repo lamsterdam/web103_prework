@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const navigate = useNavigate();
@@ -7,10 +7,15 @@ const Header = () => {
         navigate("/add");
     }
 
+    const handleChangeView = () => {
+        navigate("/show");
+    }
+
     return (
         <div className="header-class">
             <h1>Welcome to Creatorverse</h1>
-            <button onChange={handleChange}>Add a Creator</button>
+            <button onClick={handleChange}>Add A Creator</button>
+            <button onClick={handleChangeView}>View All Creators</button>
         </div>
     );
 };
