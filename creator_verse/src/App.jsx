@@ -13,22 +13,22 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [contentCreators, setContentCreators] = useState([]);
-  useEffect(() => {
-    const fetchCreators = async() => {
-      const {data} = await supabase
-      .from("creators")
-      .select()
-      .order("created_at", {ascending: true})
-      setContentCreators(data);
-    }
-    fetchCreators();
-  }, []);
+  // const [contentCreators, setContentCreators] = useState([]);
+  // useEffect(() => {
+  //   const fetchCreators = async() => {
+  //     const {data} = await supabase
+  //     .from("creators")
+  //     .select()
+  //     .order("created_at", {ascending: true})
+  //     setContentCreators(data);
+  //   }
+  //   fetchCreators();
+  // }, []);
 
   const routes = useRoutes([
     {path: "/", element: <Layout />,
       children: [
-        {index: true, element: <ShowCreators contentCreators={contentCreators} />},
+        {index: true, element: <ShowCreators />},
         {path: "/show", element: <ShowCreators />},
         {path: "/add", element: <AddCreator />},
         {path: "/edit", element: <EditCreator />},

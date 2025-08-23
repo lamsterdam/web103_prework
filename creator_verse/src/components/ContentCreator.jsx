@@ -1,4 +1,5 @@
 import React from "react";
+import '../ContentCreator.css';
 
 // Card representing a single content creator
 const ContentCreator = ({name, url, description, imageURL}) => {

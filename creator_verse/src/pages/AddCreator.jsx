@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { supabase } from "../client";
+import { useNavigate } from "react-router-dom";
 
 // Page to add a content creator to the database
 const AddCreator = () => {
     const [contentCreator, setContentCreator] = useState({name: "", description: "", url: "", imageURL: ""});
+    const navigate = useNavigate();
 
     // extract name and value of form field that changed and update the state variable with the setter
     // copy previous creator object and update it to add in the value passed in for that key name
@@ -12,10 +14,26 @@ const AddCreator = () => {
         setContentCreator((creatorData) => ({...creatorData, [name]: value}));
     };
 
+    // async function to add the new content creator to the database
+    const onAddCreator = async(event) => {
+        event.preventDefault();
+
+        await supabase
+        .from("creators")
+        .insert([{name: contentCreator.name, description: contentCreator.description, url: contentCreator.url, imageURL: contentCreator.imageURL}]);
+        
+        // setContentCreators((prevData) => ([...prevData, ...data]))
+        // await supabase
+        // .from("creators")
+        // .select()
+        // .order("created_at", {ascending: true});
+        navigate("/");
+    }
+
     return (
         <div>
             <h2>Add a new Creator</h2>
-            <form>
+            <form onSubmit={onAddCreator}>
                 <label>Name
                     <input type="text" name="name" value={contentCreator.name} onChange={handleChange}/> <br></br>
                 </label>

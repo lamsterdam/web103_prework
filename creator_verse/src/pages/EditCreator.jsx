@@ -1,4 +1,5 @@
 import React from "react";
+import { supabase } from "../client";
 
 // Page to allow user to update a content creator's information
 const EditCreator = () => {

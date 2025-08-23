@@ -14,8 +14,10 @@ const Header = () => {
     return (
         <div className="header-class">
             <h1>Welcome to Creatorverse</h1>
-            <button onClick={handleChange}>Add A Creator</button>
-            <button onClick={handleChangeView}>View All Creators</button>
+            <div className="header-buttons">
+                <button onClick={handleChange}>Add A Creator</button>
+                <button onClick={handleChangeView}>View All Creators</button>
+            </div>   
         </div>
     );
 };
