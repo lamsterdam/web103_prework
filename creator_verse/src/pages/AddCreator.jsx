@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { supabase } from "../client";
 import { useNavigate } from "react-router-dom";
+import "../AddCreator.css"
 
 // Page to add a content creator to the database
 const AddCreator = () => {
@@ -26,31 +27,35 @@ const AddCreator = () => {
     }
 
     return (
-        <div>
+        <div className="add-class">
             <h2>Add a new Creator</h2>
-            <form onSubmit={onAddCreator}>
-                <label>Name
-                    <input type="text" name="name" value={contentCreator.name} onChange={handleChange}/> <br></br>
-                </label>
+            <div className="add-form-class">
+                <form onSubmit={onAddCreator} className="add-form-grid">
+                    <div className="add-form-group">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" name="name" value={contentCreator.name} onChange={handleChange}/> 
+                    </div>
 
-                <br></br>
-                <label>Description
-                    <input type="text" name="description" value={contentCreator.description} onChange={handleChange}/> <br></br>
-                </label>
+                    <div className="form-group">
+                        <label htmlFor="description">Description</label>
+                        <textarea id="description" name="description" value={contentCreator.description} onChange={handleChange} rows={5} />
+                    </div>
 
-                <br></br>
-                <label>Image
-                    <input type="text" name="imageURL" value={contentCreator.imageURL} onChange={handleChange}/> <br></br>
-                </label>
+                    <div className="form-group">
+                        <label htmlFor="imageURL">Image</label>
+                        <input type="text" name="imageURL" value={contentCreator.imageURL} onChange={handleChange}/> 
+                    </div>
+            
+                    <h2>Social Media Links</h2>
 
-                <h2>Social Media Links</h2>
-                <label>YouTube
-                    <input type="text"name="url" value={contentCreator.url} onChange={handleChange}/> <br></br>
-                </label>
-
-                <br></br>
-                <button type="submit">Submit</button>
-            </form>
+                    <div className="form-group">
+                        <label htmlFor="url">YouTube</label>
+                        <input type="text"name="url" value={contentCreator.url} onChange={handleChange}/> 
+                    </div>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     );
 };

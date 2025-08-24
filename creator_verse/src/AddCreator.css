@@ -1,29 +1,23 @@
-.edit-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.form-grid {
+.add-form-grid {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.form-group {
+.add-form-group {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.form-group label {
+.add-form-group label {
     width: 120px;
     text-align: right;
     font-weight: bold;
 }
 
-.form-group input,
-.form-group textarea {
+.add-form-group input,
+.add-form-group textarea {
     width: 400px;
     padding: 8px;
     border-radius: 6px;
@@ -31,7 +25,7 @@
 }
 
 /* Make textarea scrollable */
-.form-group textarea {
+.add-form-group textarea {
     min-height: 80px;
     max-height: 200px;
     resize: vertical;
@@ -41,12 +35,16 @@
     word-wrap: break-word;
 }
 
-.edit-class {
+.add-class {
     color: rgb(53, 134, 201);
 }
 
-.form-class {
+.add-form-class {
     display: flex;
     justify-content: center;
 }
 
+.add-form-class button {
+    width: 150px;
+    margin-left: 250px;
+}

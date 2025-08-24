@@ -29,8 +29,8 @@ const ViewCreator = () => {
                         <div className="view-name">{contentCreator.name}</div>
                         <div className="view-description">{contentCreator.description}</div>
                         <div className="view-youtube">
-                            <img src="\YouTube_social_dark_square_(2017).svg.png" style={{width: "50px", height: "50px"}}/>
-                            <div>URL: {contentCreator.url}</div>
+                            <img src="\YouTube_social_dark_square_(2017).svg.png" alt="Youtube" className="youtube-icon" style={{width: "50px", height: "50px"}}/>
+                            <span className="youtube-url">@{contentCreator.url}</span>
                         </div>
                     </div>
                 </>)}

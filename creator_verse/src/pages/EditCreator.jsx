@@ -61,30 +61,32 @@ const EditCreator = () => {
         <div className="edit-class">
             <h2>Update the Content Creator</h2>
             <div className="form-class">
-                <form onSubmit={UpdateCreator}>
-                    <label>Name
-                        <input type="text" name="name" value={contentCreator.name} onChange={handleChange}/> <br></br>
-                    </label>
-
-                    <br></br>
-                    <label>Description
-                        <input type="text" name="description" value={contentCreator.description} onChange={handleChange}/> <br></br>
-                    </label>
-
-                    <br></br>
-                    <label>Image
-                        <input type="text" name="imageURL" value={contentCreator.imageURL} onChange={handleChange}/> <br></br>
-                    </label>
-
+                <form onSubmit={UpdateCreator} className="form-grid">
+                    <div className="form-group">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" name="name" value={contentCreator.name} onChange={handleChange}/> 
+                    </div>
+                    
+                    <div className="form-group">
+                        <label htmlFor="description">Description</label>
+                        <textarea id="description" name="description" value={contentCreator.description} onChange={handleChange} rows={5} />
+                    </div>
+                
+                    <div className="form-group">
+                        <label htmlFor="imageURL">Image</label>
+                        <input type="text" name="imageURL" value={contentCreator.imageURL} onChange={handleChange}/> 
+                    </div>
+                
                     <h2>Social Media Links</h2>
-                    <label>YouTube
-                        <input type="text"name="url" value={contentCreator.url} onChange={handleChange}/> <br></br>
-                    </label>
 
-                    <br></br>
+                    <div className="form-group">
+                        <label htmlFor="url">YouTube</label>
+                        <input type="text"name="url" value={contentCreator.url} onChange={handleChange}/> 
+                    </div>
+                    
                     <div className="edit-buttons">
                         <button type="submit">Submit</button>
-                        <button onClick={DeleteCreator}>Delete Creator</button>
+                        <button type="button" onClick={DeleteCreator}>Delete Creator</button>
                     </div>
                 </form>
             </div>

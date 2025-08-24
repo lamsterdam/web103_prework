@@ -1,6 +1,6 @@
 .content-creator-class {
     width: 400px;
-    height: 420px;
+    height: 490px;
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 16px;
@@ -25,5 +25,10 @@
     gap: 1rem;
     padding-left: 90px;
     height: 40px;
-    /* padding-top: 1px; */
+}
+
+.creator-name {
+    font-weight: bold;
+    color: rgb(53, 134, 201);
+    font-size: x-large;
 }

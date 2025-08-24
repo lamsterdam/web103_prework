@@ -21,7 +21,7 @@ const ContentCreator = ({id, name, url, description, imageURL}) => {
                 borderRadius: "12px 12px 0 0"}} 
             />
             <div style={{ padding: "8px", color: "white" }}>
-                <div>{name}</div>
+                <div className="creator-name">{name}</div>
                 <div>{description}</div>
                 <img src="\YouTube_social_dark_square_(2017).svg.png" style={{width: "50px", height: "50px"}}/>
                 <div className="content-creator-buttons">
