@@ -35,7 +35,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-
+👉🏿![Video Walkthrough](https://github.com/lamsterdam/web103_prework/blob/main/creator_verse/src/video/demo_project_103_prework.gif)
 👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
