@@ -1,18 +1,29 @@
 .content-creator-class {
+    width: 400px;
+    height: 420px;
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 16px;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.4);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    box-sizing: border-box;
+    color: #ddd;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 .content-creator-class:hover {
     transform: scale(1.02);
 }
 
-.content-creator-class img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
+.content-creator-buttons {
+    display: flex;
+    gap: 1rem;
+    padding-left: 90px;
+    height: 40px;
+    /* padding-top: 1px; */
 }

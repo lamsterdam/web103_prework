@@ -1,0 +1,27 @@
+.edit-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+label {
+    width: 100px;
+}
+
+label input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    overflow: auto;
+}
+
+.edit-class {
+    color: rgb(53, 134, 201);
+}
+
+/* .form-class {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+} */
+

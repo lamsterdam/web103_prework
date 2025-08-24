@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../client";
 import { useParams } from "react-router-dom"; 
+import "../ViewCreator.css";
 
 // Page to view details of a single content creator
 const ViewCreator = () => {
@@ -20,13 +21,19 @@ const ViewCreator = () => {
 
     }, [id]);
     return (
-        <div>
+        <div className="view-container">
             {contentCreator && (
-                <div>
-                    <div>Name: {contentCreator.name}</div>
-                    <div>Description: {contentCreator.description}</div>
-                    <div>URL: {contentCreator.url}</div>
-                </div>)}
+                <>
+                    <img src={contentCreator.imageURL} alt={contentCreator.name} />
+                    <div>
+                        <div className="view-name">{contentCreator.name}</div>
+                        <div className="view-description">{contentCreator.description}</div>
+                        <div className="view-youtube">
+                            <img src="\YouTube_social_dark_square_(2017).svg.png" style={{width: "50px", height: "50px"}}/>
+                            <div>URL: {contentCreator.url}</div>
+                        </div>
+                    </div>
+                </>)}
         </div>
     );
 };

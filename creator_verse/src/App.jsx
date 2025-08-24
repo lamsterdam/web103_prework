@@ -31,8 +31,8 @@ function App() {
         {index: true, element: <ShowCreators />},
         {path: "/show", element: <ShowCreators />},
         {path: "/add", element: <AddCreator />},
-        {path: "/edit", element: <EditCreator />},
-        {path: "/view", element: <ViewCreator />}
+        {path: "/edit/:id", element: <EditCreator />},
+        {path: "/view/:id", element: <ViewCreator />}
       ]
     }
   ]);

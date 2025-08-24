@@ -22,7 +22,7 @@ const ShowCreators = () => {
         <div className="creators-container">
             {/* check if content creator exists and map over each one to convert to a component */}
             {contentCreators && contentCreators.length > 0 ?
-            contentCreators.map((contentCreator => <ContentCreator name={contentCreator.name} url={contentCreator.url}
+            contentCreators.map((contentCreator => <ContentCreator id={contentCreator.id} name={contentCreator.name} url={contentCreator.url}
             description={contentCreator.description} imageURL={contentCreator.imageURL}/>)) :
             <h2>No Content Creators Yet!</h2>
             }

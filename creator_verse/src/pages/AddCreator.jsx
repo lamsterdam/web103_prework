@@ -22,11 +22,6 @@ const AddCreator = () => {
         .from("creators")
         .insert([{name: contentCreator.name, description: contentCreator.description, url: contentCreator.url, imageURL: contentCreator.imageURL}]);
         
-        // setContentCreators((prevData) => ([...prevData, ...data]))
-        // await supabase
-        // .from("creators")
-        // .select()
-        // .order("created_at", {ascending: true});
         navigate("/");
     }
 
@@ -45,12 +40,12 @@ const AddCreator = () => {
 
                 <br></br>
                 <label>Image
-                    <input type="text"name="url" value={contentCreator.url} onChange={handleChange}/> <br></br>
+                    <input type="text" name="imageURL" value={contentCreator.imageURL} onChange={handleChange}/> <br></br>
                 </label>
 
                 <h2>Social Media Links</h2>
                 <label>YouTube
-                    <input type="text" name="imageURL" value={contentCreator.imageURL} onChange={handleChange}/> <br></br>
+                    <input type="text"name="url" value={contentCreator.url} onChange={handleChange}/> <br></br>
                 </label>
 
                 <br></br>

@@ -1,0 +1,32 @@
+.view-container {
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 800px;
+    color: white;
+    border-radius: 12px;
+    align-items: flex-start;
+    padding-left: 150px;
+}
+
+.view-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.view-name {
+    font-weight: bold;
+    color: rgb(53, 134, 201)
+}
+
+.view-description {
+    padding-top: 20px;
+}
+
+.view-youtube {
+    display: flex;
+    justify-content: center;
+}
